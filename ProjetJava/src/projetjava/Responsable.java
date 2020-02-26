@@ -5,10 +5,18 @@
  */
 package projetjava;
 
+import java.util.TreeSet;
+
 /**
  *
  * @author mjule
  */
-public class Responsable {
+public abstract class Responsable extends Employe {
+    private TreeSet<Employe> subordonnes;
+
+    public Responsable(String nom, String prenom, int matricule) {
+        super(nom, prenom, matricule);
+    }
+    
     
 }
