@@ -9,6 +9,10 @@ package projetjava;
  *
  * @author mjule
  */
-public class Commercial {
+public abstract class Commercial extends Employe {
+    
+    public Commercial(String nom, String prenom, int matricule) {
+        super(nom, prenom, matricule);
+    }
     
 }
