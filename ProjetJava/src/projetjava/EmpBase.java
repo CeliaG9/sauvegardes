@@ -9,6 +9,10 @@ package projetjava;
  *
  * @author mjule
  */
-public class EmpBase {
+public abstract class EmpBase extends Employe {
+    
+    public EmpBase(String nom, String prenom, int matricule) {
+        super(nom, prenom, matricule);
+    }
     
 }
