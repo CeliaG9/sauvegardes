@@ -31,7 +31,7 @@ public abstract class Employe {
     public int getMatricule() {
         return matricule;
     }
-    
+      
     public abstract float calculerSalaire();
     
 }
