@@ -20,4 +20,5 @@ public abstract class EmpBase extends Employe {
         return salaire;
     }
     
+    
 }

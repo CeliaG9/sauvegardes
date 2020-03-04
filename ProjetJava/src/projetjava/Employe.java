@@ -17,11 +17,26 @@ public abstract class Employe {
     protected int matricule;
     protected int indice;
 
+<<<<<<< HEAD
+    public Employe(String nom, String prenom, int matricule) throws EmployeException {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.matricule = matricule;
+        
+        // Gestion des exceptions
+        // nom
+        if (! ('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
+            throw new EmployeException ("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
+        // prénom
+        if (! ('A' <= prenom.charAt(0) && prenom.charAt(0) <= 'Z'))
+            throw new EmployeException ("Le prénom doit obligatoire commencer par une majuscule. Veuillez donc modifier : " + prenom);
+=======
     public Employe(String nom, String prenom, int matricule, int indice){
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
         this.indice = indice;
+>>>>>>> 0e7a7891f68ccce2ca0648e22de8adb9bfc566e0
     }
     
 
