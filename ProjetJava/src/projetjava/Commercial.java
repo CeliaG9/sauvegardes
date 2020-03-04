@@ -12,7 +12,7 @@ package projetjava;
 public abstract class Commercial extends Employe {
     protected float vente;
     
-    public Commercial(String nom, String prenom, int matricule, int indice, float vente) {
+    public Commercial(String nom, String prenom, int matricule, int indice, float vente) throws EmployeException {
         super(nom, prenom, matricule, indice);
         this.vente = vente;
     }
