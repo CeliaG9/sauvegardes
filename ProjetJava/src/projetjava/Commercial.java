@@ -10,6 +10,8 @@ package projetjava;
  * @author mjule
  */
 public abstract class Commercial extends Employe {
+    protected int partVariable;
+    protected int vente;
     
     public Commercial(String nom, String prenom, int matricule) {
         super(nom, prenom, matricule);
