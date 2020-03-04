@@ -14,9 +14,13 @@ import java.util.TreeSet;
 public abstract class Responsable extends Employe {
     private TreeSet<Employe> subordonnes;
 
-    public Responsable(String nom, String prenom, int matricule) {
-        super(nom, prenom, matricule);
+    public Responsable(String nom, String prenom, int matricule, int indice) {
+        super(nom, prenom, matricule, indice);
     }
     
+    public float calculSalaire() {
+    float salaire = 12*indice;
+    return salaire;
+    }
     
 }
