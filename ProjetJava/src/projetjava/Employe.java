@@ -44,5 +44,10 @@ public abstract class Employe {
         int annee = sc.nextInt();
         return annee;
     }
-        
+    
+    @Override
+    public String toString() {
+        return this.prenom + " " + this.nom + " est " + this.getClass().getSimpleName() + " et touche :";
+    }
+    
 }
