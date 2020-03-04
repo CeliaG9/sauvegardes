@@ -19,8 +19,8 @@ public abstract class Responsable extends Employe {
     }
     
     public float calculSalaire() {
-    float salaire = 12*indice;
-    return salaire;
+        float salaire = 12*indice;
+        return salaire;
     }
     
 }
