@@ -10,11 +10,15 @@ package projetjava;
  * @author mjule
  */
 public abstract class Commercial extends Employe {
-    protected int partVariable;
-    protected int vente;
+    protected float vente;
     
-    public Commercial(String nom, String prenom, int matricule) {
-        super(nom, prenom, matricule);
+    public Commercial(String nom, String prenom, int matricule, int indice, float vente) {
+        super(nom, prenom, matricule, indice);
+        this.vente = vente;
     }
     
+    public float calculSalaire() {
+        float salaire = (float) (12*indice + 0.1*vente);
+        return salaire;
+    }
 }
