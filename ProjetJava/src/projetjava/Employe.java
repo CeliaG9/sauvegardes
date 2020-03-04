@@ -10,9 +10,9 @@ package projetjava;
  * @author mjule
  */
 public abstract class Employe {
-    private final String nom;
-    private final String prenom;
-    private final int matricule;
+    protected String nom;
+    protected String prenom;
+    protected int matricule;
 
     public Employe(String nom, String prenom, int matricule){
         this.nom = nom;
