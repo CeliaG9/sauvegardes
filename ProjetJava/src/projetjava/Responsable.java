@@ -14,7 +14,7 @@ import java.util.TreeSet;
 public abstract class Responsable extends Employe {
     private TreeSet<Employe> subordonnes;
 
-    public Responsable(String nom, String prenom, int matricule, int indice) {
+    public Responsable(String nom, String prenom, int matricule, int indice) throws EmployeException {
         super(nom, prenom, matricule, indice);
     }
     
