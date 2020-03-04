@@ -23,6 +23,7 @@ public abstract class Employe {
         this.matricule = matricule;
         this.indice = indice;
     }
+    
 
     public String getNom() {
         return nom;
