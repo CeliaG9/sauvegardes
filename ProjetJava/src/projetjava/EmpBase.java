@@ -11,7 +11,7 @@ package projetjava;
  */
 public abstract class EmpBase extends Employe {
     
-    public EmpBase(String nom, String prenom, int matricule, int indice) {
+    public EmpBase(String nom, String prenom, int matricule, int indice) throws EmployeException {
         super(nom, prenom, matricule, indice);
     }
     
