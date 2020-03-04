@@ -44,24 +44,3 @@ public class Effectif {
             System.out.println(e);
         }
     }
-    
-    
-//    Scanner sc;
-//        try {
-//            sc = new Scanner(new File(C:\\Users\\mjule\\Desktop\\2A_ISIS_Ingénieurs\\Projet_JAVA));
-//            
-//            // on lit la premiÃ¨re ligne d'entÃªte que l'on ne traite pas
-//            String ligne = sc.nextLine();
-//
-//            while (sc.hasNext()) {
-//                // on lit une nouvelle ligne
-//                ligne = sc.nextLine();
-//                String[] res = ligne.split(",");
-//                lesVilles.add(new Ville(res[0], Integer.parseInt(res[1]), Integer.parseInt(res[2]), Integer.parseInt(res[3])));
-//            }
-//        } catch (FileNotFoundException e) {
-//            System.out.println(e);
-//        }
-//
-//    }
-}
