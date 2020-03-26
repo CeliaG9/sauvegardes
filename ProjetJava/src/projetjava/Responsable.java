@@ -12,15 +12,28 @@ import java.util.TreeSet;
  * @author mjule
  */
 public abstract class Responsable extends Employe {
+    // Collection pour les subordonnés
     private TreeSet<Employe> subordonnes;
-
+    
+    // Constructeur d'un Responsable
     public Responsable(String nom, String prenom, int matricule, int indice) throws EmployeException {
         super(nom, prenom, matricule, indice);
+        subordonnes = new TreeSet<>();
     }
     
-    public float calculSalaire() {
+    // Méthode pour ajouter un subordonné dans la colletion / TreeSet()
+    public void ajoutersubordonnes(Employe employe){
+        subordonnes.add(employe);
+    }
+    
+    public double calculSalaire() {
         float salaire = 12*indice;
         return salaire;
     }
     
+    // Affichage 
+    @Override
+    public String toString(){
+        return super.toString();
+    }
 }
