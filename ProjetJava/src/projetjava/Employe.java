@@ -102,11 +102,12 @@ public abstract class Employe implements Comparable<Employe>  {
             }
             
         }else{ // Si le type n'est pas le même
-            this.getClass().getSimpleName().compareTo(employe.getClass().getSimpleName()); // On compare en fonction du type
+            int compareTo = this.getClass().getSimpleName().compareTo(employe.getClass().getSimpleName()); // On compare en fonction du type
         }
         return 0;
-        
     }
+
+    
     
       
     
