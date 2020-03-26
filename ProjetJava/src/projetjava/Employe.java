@@ -47,14 +47,8 @@ public abstract class Employe {
         return matricule;
     }
    
-    public abstract float calculerSalaire();
+    public abstract double calculerSalaire();
     
-    public int anneeEnCours() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("En quelle année sommes-nous ?");
-        int annee = sc.nextInt();
-        return annee;
-    }
     
     @Override
     public String toString() {
