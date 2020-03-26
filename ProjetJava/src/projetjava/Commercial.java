@@ -9,17 +9,12 @@ package projetjava;
  *
  * @author mjule
  */
-public abstract class Commercial extends Employe {
+public class Commercial extends Employe {
     protected float vente;
     
     public Commercial(String nom, String prenom, int matricule, int indice, float vente) throws EmployeException {
         super(nom, prenom, matricule, indice);
         this.vente = vente;
-    }
-    
-    public float calculSalaire() {
-        float salaire = (float) (12*indice + 0.1*vente);
-        return salaire;
     }
     
     /**
@@ -30,4 +25,13 @@ public abstract class Commercial extends Employe {
     public String toString(){
         return super.toString();
     }
+
+    // Méthode permettant de calculer le salaire d'un commercial
+    @Override
+    public double calculerSalaire() {
+        double salaire = (double) (12*indice + 0.1*vente);
+        return salaire;
+    }
+
+
 }
