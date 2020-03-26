@@ -30,8 +30,8 @@ public class ProjetJava {
         entreprise.ajouterEmploye(new EmpBase("LEFEVRE", "Gabrielle", 204,125));
         entreprise.ajouterEmploye(new EmpBase("PETIT-JEAN", "Céline", 205,125));
         // Commerciaux
-        entreprise.ajouterEmploye(new Commercial("BESSON", "Olivier", 301,150));
-        entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302,150));
+        entreprise.ajouterEmploye(new Commercial("BESSON", "Olivier", 301,150,14));
+        entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302,150,18));
          
        
         
