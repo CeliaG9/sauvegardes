@@ -13,6 +13,7 @@ public class ProjetJava {
 
     /**
      * @param args the command line arguments
+     * @throws projetjava.EmployeException
      */
     public static void main(String[] args) throws EmployeException {
         
