@@ -12,7 +12,7 @@ import java.util.TreeSet;
  * @author mjule
  */
 public class Responsable extends Employe {
-    // Collection contenant les subordonnés
+    // Collection contenant les subordonnés : employés sous les ordres d'un responsable
     private final TreeSet<Employe> subordonnes;
     
     // Constructeur d'un Responsable
