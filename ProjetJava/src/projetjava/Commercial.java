@@ -11,7 +11,7 @@ package projetjava;
  */
 public class Commercial extends Employe {
     // Attribut spécifique au commercial 
-    private int vente;
+    private final int vente;
     
     public Commercial(String nom, String prenom, int matricule, int indice, int vente) throws EmployeException {
         super(nom, prenom, matricule, indice);
