@@ -20,7 +20,7 @@ public class Entreprise {
 
     // Création du constructeur
     public Entreprise() {
-        this.lesEmployes = lesEmployes;
+        lesEmployes = new TreeSet<>();
     }
     
     // Méthode permettant d'ajouter des employés dans la collection
