@@ -5,8 +5,6 @@
  */
 package projetjava;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.TreeSet;
 
 /**
@@ -15,7 +13,7 @@ import java.util.TreeSet;
  */
 public class Entreprise {
     // Collection contenant les employés
-    private TreeSet<Employe> lesEmployes;
+    private final TreeSet<Employe> lesEmployes;
 
     // Création du constructeur
     public Entreprise() {
@@ -46,7 +44,7 @@ public class Entreprise {
             
 
 
-}
+
     
 
     
