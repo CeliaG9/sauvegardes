@@ -23,6 +23,15 @@ public class Effectif {
         this.lesEmployes = lesEmployes;
     }
     
+    // Méthode permettant d'ajouter des employés dans la collection
+    public void ajouterEmploye(Employe employe){
+        lesEmployes.add(employe);
+    }
+    
+    // Méthode permettant de supprimer des employés de la collection
+    public void supprimerEmploye(Employe employe){
+        lesEmployes.remove(this);
+    }    
     
             
             
