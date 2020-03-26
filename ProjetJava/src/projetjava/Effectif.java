@@ -15,8 +15,18 @@ import java.util.TreeSet;
  * @author mjule
  */
 public class Effectif {
-    protected TreeSet<Employe> entreprise = new TreeSet<>();
+    // Collection contenant les employés
+    private TreeSet<Employe> lesEmployes;
+
+    // Création du constructeur
+    public Effectif(TreeSet<Employe> lesEmployes) {
+        this.lesEmployes = lesEmployes;
+    }
     
+    
+            
+            
+            
 
 
 }
