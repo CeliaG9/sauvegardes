@@ -16,7 +16,7 @@ public abstract class Employe implements Comparable<Employe>  {
     private final String nom;
     private final String prenom;
     private final int matricule;
-    private final int indice;
+    protected int indice;
 
 
     public Employe(String nom, String prenom, int matricule, int indice) throws EmployeException {
