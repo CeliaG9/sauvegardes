@@ -7,34 +7,35 @@ package projetjava;
 
 import java.util.Objects;
 
-
 /**
  *
  * @author mjule
  */
-public abstract class Employe implements Comparable<Employe>  {
+public abstract class Employe implements Comparable<Employe> {
+
     private final String nom;
     private final String prenom;
     private final int matricule;
     protected int indice;
-
 
     public Employe(String nom, String prenom, int matricule, int indice) throws EmployeException {
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
         this.indice = indice;
-        
+
         // Gestion des exceptions
         // nom
-    if (! ('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
-        throw new EmployeException ("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
+        if (('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
+        {
+            throw new EmployeException("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
+        }
         // prénom
-    if (! ('A' <= prenom.charAt(0) && prenom.charAt(0) <= 'Z'))
-        throw new EmployeException ("Le prénom doit obligatoire commencer par une majuscule. Veuillez donc modifier : " + prenom);
- 
+        if (!('A' <= prenom.charAt(0) && prenom.charAt(0) <= 'Z')) {
+            throw new EmployeException("Le prénom doit obligatoire commencer par une majuscule. Veuillez donc modifier : " + prenom);
+        }
+
     }
-    
 
     public String getNom() {
         return nom;
@@ -47,10 +48,9 @@ public abstract class Employe implements Comparable<Employe>  {
     public int getMatricule() {
         return matricule;
     }
-   
+
     public abstract double calculerSalaire();
 
-    
     // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
     // Méthode hashCode()
     @Override
@@ -62,7 +62,7 @@ public abstract class Employe implements Comparable<Employe>  {
         hash = 29 * hash + this.indice;
         return hash;
     }
-    
+
     // Méthode equals()
     @Override
     public boolean equals(Object obj) {
@@ -90,58 +90,24 @@ public abstract class Employe implements Comparable<Employe>  {
         }
         return true;
     }
-    
+
     // Méthode CompareTo()
     @Override
-    public int compareTo(Employe employe){ // On compare les employés en fonction de leur type (Employé de base, Responsable, Commercial)
-        if (this.getClass().getSimpleName().equals(employe.getClass().getSimpleName())){ // Si le type est le même
-            if (this.matricule < employe.matricule){ // On compare en fonction du matricule 
+    public int compareTo(Employe employe) { // On compare les employés en fonction de leur type (Employé de base, Responsable, Commercial)
+        if (this.getClass().getSimpleName().equals(employe.getClass().getSimpleName())) { // Si le type est le même
+            if (this.matricule < employe.matricule) { // On compare en fonction du matricule 
                 return -1; // cours : Renvoie une valeur négative si obj1 < obj2
-            }else{
-                return 1; 
+            } else {
+                return 1;
             }
-            
-        }else{ // Si le type n'est pas le même
-            this.getClass().getSimpleName().compareTo(employe.getClass().getSimpleName()); // On compare en fonction du type
+        } else { // Si le type n'est pas le même
+            return 0; // On compare en fonction du type
         }
-        return 0;
-    
     }
 
-    
-    
-      
-    
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @Override
     public String toString() {
-        return this.prenom + " " + this.nom + " est " + this.getClass().getSimpleName() + " et touche :";
+        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName();
     }
-    
+
 }
