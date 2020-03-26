@@ -98,11 +98,11 @@ public abstract class Employe implements Comparable<Employe>  {
             if (this.matricule < employe.matricule){ // On compare en fonction du matricule 
                 return -1; // cours : Renvoie une valeur négative si obj1 < obj2
             }else{
-            return 1; 
+                return 1; 
             }
             
         }else{ // Si le type n'est pas le même
-            this.getClass().getSimpleName().equals(employe.getClass().getSimpleName()); // On compare en fonction du type
+            this.getClass().getSimpleName().compareTo(employe.getClass().getSimpleName()); // On compare en fonction du type
         }
         return 0;
         
