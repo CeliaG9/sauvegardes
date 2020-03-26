@@ -21,4 +21,13 @@ public abstract class Commercial extends Employe {
         float salaire = (float) (12*indice + 0.1*vente);
         return salaire;
     }
+    
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString(){
+        return super.toString();
+    }
 }
