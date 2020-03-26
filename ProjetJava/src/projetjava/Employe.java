@@ -6,7 +6,7 @@
 package projetjava;
 
 import java.util.Objects;
-import java.util.Scanner;
+
 
 /**
  *
@@ -63,7 +63,7 @@ public abstract class Employe implements Comparable<Employe>  {
         return hash;
     }
     
-// Méthode equals()
+    // Méthode equals()
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
