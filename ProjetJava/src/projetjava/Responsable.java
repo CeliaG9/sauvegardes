@@ -33,7 +33,7 @@ public class Responsable extends Employe {
     
     // Méthode calculSalaire()
     public double calculSalaire() {
-        float salaire = 12*indice;
+        double salaire = 12*indice;
         return salaire;
     }
     
