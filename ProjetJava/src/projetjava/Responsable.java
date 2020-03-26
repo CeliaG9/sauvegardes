@@ -21,11 +21,17 @@ public abstract class Responsable extends Employe {
         subordonnes = new TreeSet<>();
     }
     
-    // Méthode pour ajouter un subordonné dans la colletion / TreeSet()
+    // Méthode pour ajouter des subordonnés dans la colletion / TreeSet()
     public void ajoutersubordonnes(Employe employe){
         subordonnes.add(employe);
     }
     
+    // Méthode pour supprimer des subordonnés de la collection
+    public void supprimersubordonnes(Employe employe){
+        subordonnes.remove(employe);
+    }
+    
+    // Méthode calculSalaire()
     public double calculSalaire() {
         float salaire = 12*indice;
         return salaire;
