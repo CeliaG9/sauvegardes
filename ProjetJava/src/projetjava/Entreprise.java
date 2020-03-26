@@ -29,7 +29,7 @@ public class Entreprise {
     
     // Méthode permettant de supprimer des employés de la collection
     public void supprimerEmploye(Employe employe){
-        lesEmployes.remove(this);
+        lesEmployes.remove(employe);
     }    
     
     // Méthode permettant de calculer les salaires de toute l'entreprise
