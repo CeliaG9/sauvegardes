@@ -13,10 +13,10 @@ import java.util.Objects;
  * @author mjule
  */
 public abstract class Employe implements Comparable<Employe>  {
-    protected String nom;
-    protected String prenom;
-    protected int matricule;
-    protected int indice;
+    private final String nom;
+    private final String prenom;
+    private final int matricule;
+    private final int indice;
 
 
     public Employe(String nom, String prenom, int matricule, int indice) throws EmployeException {
@@ -105,6 +105,7 @@ public abstract class Employe implements Comparable<Employe>  {
             int compareTo = this.getClass().getSimpleName().compareTo(employe.getClass().getSimpleName()); // On compare en fonction du type
         }
         return 0;
+    
     }
 
     
