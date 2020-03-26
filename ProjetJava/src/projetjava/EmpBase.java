@@ -15,7 +15,7 @@ public abstract class EmpBase extends Employe {
         super(nom, prenom, matricule, indice);
     }
     
-    public float calculSalaire() {
+    public double calculSalaire() {
         float salaire = 12*indice;
         return salaire;
     }
