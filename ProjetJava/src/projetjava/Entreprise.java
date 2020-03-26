@@ -39,7 +39,14 @@ public class Entreprise {
         return salairetotal;
     }
     
-    
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return lesEmployes.toString();
+    }
     
 }
     
