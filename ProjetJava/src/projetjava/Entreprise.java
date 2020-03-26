@@ -19,7 +19,7 @@ public class Entreprise {
     private TreeSet<Employe> lesEmployes;
 
     // Création du constructeur
-    public Entreprise(TreeSet<Employe> lesEmployes) {
+    public Entreprise() {
         this.lesEmployes = lesEmployes;
     }
     
@@ -32,6 +32,14 @@ public class Entreprise {
     public void supprimerEmploye(Employe employe){
         lesEmployes.remove(this);
     }    
+    
+    // Méthode permettant de calculer les salaires de toute l'entreprise
+    public double calculSalaireEntreprise(){
+        double salairetotal = 0;
+        for (Employe employe : lesEmployes){
+            salairetotal = 
+        }
+    }
     
             
             
