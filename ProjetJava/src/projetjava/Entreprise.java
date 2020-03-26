@@ -31,12 +31,16 @@ public class Entreprise {
     }    
     
     // Méthode permettant de calculer les salaires de toute l'entreprise
-   /* public double calculSalaireEntreprise(){
+    public double calculSalaireEntreprise(){
         double salairetotal = 0;
         for (Employe employe : lesEmployes){
-            salairetotal = 
+            salairetotal = salairetotal + employe.calculerSalaire();
         }
-    }*/
+        return salairetotal;
+    }
+    
+    
+    
 }
     
             
