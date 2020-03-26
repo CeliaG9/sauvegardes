@@ -16,10 +16,11 @@ public class ProjetJava {
      */
     public static void main(String[] args) throws EmployeException {
         
-        // Création des employés
+        // Création de l'entreprise
         Entreprise entreprise = new Entreprise();
         
-        // Une dizaine d'employés au départ
+        
+        // Création des employés : une dizaine d'employés au départ
         // Responsables
         entreprise.ajouterEmploye(new Responsable("HUBERT", "Lucas", 101, 175));
         entreprise.ajouterEmploye(new Responsable("LAPORTE", "Anaïs", 102, 175));
