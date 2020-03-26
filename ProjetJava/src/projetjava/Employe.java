@@ -5,13 +5,14 @@
  */
 package projetjava;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
  *
  * @author mjule
  */
-public abstract class Employe {
+public abstract class Employe implements Comparable<Employe>  {
     protected String nom;
     protected String prenom;
     protected int matricule;
@@ -48,6 +49,82 @@ public abstract class Employe {
     }
    
     public abstract double calculerSalaire();
+
+    
+    // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
+    // Méthode hashCode()
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.nom);
+        hash = 29 * hash + Objects.hashCode(this.prenom);
+        hash = 29 * hash + this.matricule;
+        hash = 29 * hash + this.indice;
+        return hash;
+    }
+    
+// Méthode equals()
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Employe other = (Employe) obj;
+        if (this.matricule != other.matricule) {
+            return false;
+        }
+        if (this.indice != other.indice) {
+            return false;
+        }
+        if (!Objects.equals(this.nom, other.nom)) {
+            return false;
+        }
+        if (!Objects.equals(this.prenom, other.prenom)) {
+            return false;
+        }
+        return true;
+    }
+    
+    // Méthode CompareTo()
+    @Override
+    public int compareTo(Employe employe){ // On compare les employés en fonction de leur type (Employé de base, Responsable, Commercial)
+        if (this.getClass().getSimpleName().equals(employe.getClass().getSimpleName())){ // Si le type est le même
+            return this.matricule.compareTo(employe.matricule); // On compare en fonction du matricule 
+        }else{
+            this.getClass().getSimpleName().equals(employe.getClass().getSimpleName());
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     @Override
