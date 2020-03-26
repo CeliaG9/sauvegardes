@@ -26,7 +26,7 @@ public class Commercial extends Employe {
      */
     @Override
     public String toString(){
-        return super.toString();
+        return super.toString() + "ventes mensuelles :" + vente;
     }
 
     // Méthode permettant de calculer le salaire d'un commercial
