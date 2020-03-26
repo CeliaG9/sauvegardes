@@ -32,8 +32,9 @@ public class ProjetJava {
         // Commerciaux
         entreprise.ajouterEmploye(new Commercial("BESSON", "Olivier", 301,150,14));
         entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302,150,18));
-         
-       
+        
+        // Affichage de l'entreprise
+        System.out.println("L'entreprise comprend :" + entreprise);
         
         
 }
