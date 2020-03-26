@@ -14,9 +14,30 @@ public class ProjetJava {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Projet lancé avec succès");
-    }
+    public static void main(String[] args) throws EmployeException {
+        
+        // Création des employés
+        Entreprise entreprise = new Entreprise();
+        
+        // Une dizaine d'employés au départ
+        // Responsables
+        entreprise.ajouterEmploye(new Responsable("HUBERT", "Lucas", 101, 175));
+        entreprise.ajouterEmploye(new Responsable("LAPORTE", "Anaïs", 102, 175));
+        // Employés de base
+        entreprise.ajouterEmploye(new EmpBase("GOMEZ", "Dominique", 201, 125));
+        entreprise.ajouterEmploye(new EmpBase("SIMON", "Claire", 202, 125));
+        entreprise.ajouterEmploye(new EmpBase("JOUBERT", "Marc", 203, 125));
+        entreprise.ajouterEmploye(new EmpBase("LEFEVRE", "Gabrielle", 204,125));
+        entreprise.ajouterEmploye(new EmpBase("PETIT-JEAN", "Céline", 205,125));
+        // Commerciaux
+        entreprise.ajouterEmploye(new Commercial("BESSON", "Olivier", 301,150));
+        entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302,150));
+         
+       
+        
+        
+}
     
 }
+    
+
