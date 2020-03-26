@@ -10,9 +10,10 @@ package projetjava;
  * @author mjule
  */
 public class Commercial extends Employe {
-    protected float vente;
+    // Attribut spécifique au commercial 
+    private int vente;
     
-    public Commercial(String nom, String prenom, int matricule, int indice, float vente) throws EmployeException {
+    public Commercial(String nom, String prenom, int matricule, int indice, int vente) throws EmployeException {
         super(nom, prenom, matricule, indice);
         this.vente = vente;
     }
