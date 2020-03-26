@@ -13,7 +13,7 @@ import java.util.TreeSet;
  */
 public class Responsable extends Employe {
     // Collection contenant les subordonnés
-    private TreeSet<Employe> subordonnes;
+    private final TreeSet<Employe> subordonnes;
     
     // Constructeur d'un Responsable
     public Responsable(String nom, String prenom, int matricule, int indice) throws EmployeException {
@@ -38,6 +38,7 @@ public class Responsable extends Employe {
     }
     
     // Méthode pour calculer la somme des salaires de toute une branche hiérarchique
+    
     
     
     
