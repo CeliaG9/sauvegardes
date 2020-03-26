@@ -92,22 +92,24 @@ public abstract class Employe implements Comparable<Employe>  {
     }
     
     // Méthode CompareTo()
-    /*@Override
+    @Override
     public int compareTo(Employe employe){ // On compare les employés en fonction de leur type (Employé de base, Responsable, Commercial)
         if (this.getClass().getSimpleName().equals(employe.getClass().getSimpleName())){ // Si le type est le même
-            return this.matricule.compareTo(employe.matricule); // On compare en fonction du matricule 
-        }else{
-            this.getClass().getSimpleName().equals(employe.getClass().getSimpleName());
-        }*/
-    @Override
-    public int compareTo(Employe employe){
-        if (this.matricule < employe.matricule){
-            return -1; // cours : Renvoie une valeur négative si obj1 < obj2
-        }else{
-            return 1;
+            if (this.matricule < employe.matricule){ // On compare en fonction du matricule 
+                return -1; // cours : Renvoie une valeur négative si obj1 < obj2
+            }else{
+            return 1; 
+            }
+        }else{ // Si le type n'est pas le même
+            this.getClass().getSimpleName().equals(employe.getClass().getSimpleName()); // On compare en fonction du type
         }
+        return 0;
         
     }
+    
+      
+    
+}
     
     
     
