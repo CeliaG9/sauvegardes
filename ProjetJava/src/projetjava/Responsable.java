@@ -11,8 +11,8 @@ import java.util.TreeSet;
  *
  * @author mjule
  */
-public abstract class Responsable extends Employe {
-    // Collection pour les subordonnés
+public class Responsable extends Employe {
+    // Collection contenant les subordonnés
     private TreeSet<Employe> subordonnes;
     
     // Constructeur d'un Responsable
@@ -37,9 +37,19 @@ public abstract class Responsable extends Employe {
         return salaire;
     }
     
+    // Méthode pour calculer la somme des salaires de toute une branche hiérarchique
+    
+    
+    
+    
     // Affichage 
     @Override
     public String toString(){
         return super.toString();
+    }
+
+    @Override
+    public double calculerSalaire() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
