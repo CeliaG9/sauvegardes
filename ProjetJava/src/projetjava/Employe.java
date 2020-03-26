@@ -24,16 +24,17 @@ public abstract class Employe implements Comparable<Employe>  {
         this.prenom = prenom;
         this.matricule = matricule;
         this.indice = indice;
+    }
         
         // Gestion des exceptions
         // nom
-    if (! ('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
+    /*if (! ('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
         throw new EmployeException ("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
         // prénom
     if (! ('A' <= prenom.charAt(0) && prenom.charAt(0) <= 'Z'))
         throw new EmployeException ("Le prénom doit obligatoire commencer par une majuscule. Veuillez donc modifier : " + prenom);
  
-    }
+    }*/
     
 
     public String getNom() {
