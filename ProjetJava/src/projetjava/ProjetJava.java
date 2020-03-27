@@ -36,7 +36,9 @@ public class ProjetJava {
         entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302,150,18));
         
         // Affichage de l'entreprise
-        System.out.println("L'entreprise comprend :" + entreprise);
+        System.out.println("L'entreprise comprend :" + entreprise.toString());
+        
+        // entreprise.calculSalaireEntreprise();
         
         
 }
