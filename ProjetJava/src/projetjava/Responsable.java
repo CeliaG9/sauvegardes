@@ -5,7 +5,7 @@
  */
 package projetjava;
 
-import java.util.TreeSet;
+import java.util.HashSet;
 
 /**
  *
@@ -13,12 +13,12 @@ import java.util.TreeSet;
  */
 public class Responsable extends Employe {
     // Collection contenant les subordonnés : employés sous les ordres d'un responsable
-    private final TreeSet<Employe> LesSubordonnes;
+    private final HashSet<Employe> LesSubordonnes;
     
     // Constructeur d'un Responsable
     public Responsable(String nom, String prenom, int matricule, int indice) throws EmployeException {
         super(nom, prenom, matricule, indice);
-        LesSubordonnes = new TreeSet<>();
+        LesSubordonnes = new HashSet<>();
     }
     
     // Méthode pour ajouter des subordonnés dans la colletion / TreeSet()
