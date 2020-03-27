@@ -52,7 +52,7 @@ public abstract class Employe implements Comparable<Employe> {
     public abstract double calculerSalaire();
 
     // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
-    // Méthode hashCode()
+    
     @Override
     public int hashCode() {
         int hash = 5;
