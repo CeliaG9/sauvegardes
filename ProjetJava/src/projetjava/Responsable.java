@@ -32,7 +32,8 @@ public class Responsable extends Employe {
     }
     
     // Méthode calculSalaire()
-    public double calculSalaire() {
+    @Override
+    public double calculerSalaire() {
         double salaire = 12*indice;
         return salaire;
     }
@@ -62,9 +63,5 @@ public class Responsable extends Employe {
     public String toString(){
         return super.toString();
     }
-
-    @Override
-    public double calculerSalaire() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
+
