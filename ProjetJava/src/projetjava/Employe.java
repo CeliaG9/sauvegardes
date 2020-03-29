@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author mjule
  */
-public abstract class Employe implements Comparable<Employe> {
+public abstract class Employe implements Payable {
 
     private final String nom;
     private final String prenom;
@@ -26,7 +26,7 @@ public abstract class Employe implements Comparable<Employe> {
 
         // Gestion des exceptions
         // nom
-        if (('A' <= nom.length() && nom.length() <= 'Z')) // le nom doit être écrit en majuscule // dans le cas inverse : on gère l'exception
+        if (!nom.equals(nom.toUpperCase())) // le nom doit commencer par une majuscule // dans le cas inverse : on gère l'exception
         {
             throw new EmployeException("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
         }
@@ -49,7 +49,8 @@ public abstract class Employe implements Comparable<Employe> {
         return matricule;
     }
 
-    public abstract double calculerSalaire();
+    @Override
+    public abstract double calculSalaire();
 
     // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
     
@@ -89,20 +90,6 @@ public abstract class Employe implements Comparable<Employe> {
             return false;
         }
         return true;
-    }
-
-    // Méthode CompareTo()
-    @Override
-    public int compareTo(Employe employe) { // On compare les employés en fonction de leur type (Employé de base, Responsable, Commercial)
-        if (this.getClass().getSimpleName().equals(employe.getClass().getSimpleName())) { // Si le type est le même
-            if (this.matricule < employe.matricule) { // On compare en fonction du matricule 
-                return -1; // cours : Renvoie une valeur négative si obj1 < obj2
-            } else {
-                return 1;
-            }
-        } else { // Si le type n'est pas le même
-            return 0; // On compare en fonction du type
-        }
     }
 
     @Override

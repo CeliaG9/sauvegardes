@@ -5,7 +5,8 @@
  */
 package projetjava;
 
-import java.util.TreeSet;
+import java.util.HashSet;
+import java.util.Objects;
 
 /**
  *
@@ -13,11 +14,11 @@ import java.util.TreeSet;
  */
 public class Entreprise {
     // Collection contenant les employés
-    private final TreeSet<Employe> lesEmployes;
+    private final HashSet<Employe> lesEmployes;
 
     // Création du constructeur
     public Entreprise() {
-        lesEmployes = new TreeSet<>();
+        lesEmployes = new HashSet<>();
     }
     
     // Méthode permettant d'ajouter des employés dans la collection
@@ -34,15 +35,36 @@ public class Entreprise {
     public double calculSalaireEntreprise(){
         double salairetotal = 0;
         for (Employe employe : lesEmployes){
-            salairetotal = salairetotal + employe.calculerSalaire();
+            salairetotal = salairetotal + employe.calculSalaire();
         }
         return salairetotal;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 71 * hash + Objects.hashCode(this.lesEmployes);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Entreprise other = (Entreprise) obj;
+        if (!Objects.equals(this.lesEmployes, other.lesEmployes)) {
+            return false;
+        }
+        return true;
+    }    
     
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
         return lesEmployes.toString();

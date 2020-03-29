@@ -17,7 +17,7 @@ public class EmpBase extends Employe {
     
     // Méthode permettant de calculer le salaire d'un employé de base 
     @Override
-    public double calculerSalaire() {
+    public double calculSalaire() {
         double salaire = 12*indice;
         return salaire;
     }

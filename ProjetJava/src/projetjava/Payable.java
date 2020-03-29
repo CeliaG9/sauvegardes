@@ -10,5 +10,5 @@ package projetjava;
  * @author mjule
  */
 public interface Payable {
-    public void calculSalire();
+    public double calculSalaire();
 }

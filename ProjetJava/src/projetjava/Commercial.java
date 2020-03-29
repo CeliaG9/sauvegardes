@@ -31,7 +31,7 @@ public class Commercial extends Employe {
 
     // Méthode permettant de calculer le salaire d'un commercial
     @Override
-    public double calculerSalaire() {
+    public double calculSalaire() {
         double salaire = (double) (12*indice + 0.1*vente);
         return salaire;
     }
