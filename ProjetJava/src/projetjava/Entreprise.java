@@ -5,6 +5,7 @@
  */
 package projetjava;
 
+
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -65,6 +66,7 @@ public class Entreprise {
         }
         return true;
     }    
+
     
     @Override
     public String toString() {
