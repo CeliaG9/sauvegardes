@@ -49,9 +49,6 @@ public abstract class Employe implements Payable {
         return matricule;
     }
 
-    @Override
-    public abstract double calculSalaire();
-
     // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
     
     @Override
