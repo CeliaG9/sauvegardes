@@ -34,6 +34,8 @@ public class ProjetJava {
             entreprise.ajouterEmploye(new Commercial("BESSON", "Olivier", 301, 150, 14));
             entreprise.ajouterEmploye(new Commercial("GROS", "Paul", 302, 150, 18));
 
+            // Affectation de subordonnés à un responsable
+   
             // Affichage de l'entreprise
             System.out.println("L'entreprise comprend :" + entreprise.toString());
                
