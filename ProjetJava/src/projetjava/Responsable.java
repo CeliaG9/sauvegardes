@@ -13,8 +13,10 @@ import java.util.Objects;
  * @author mjule
  */
 public class Responsable extends Employe {
+    
     // Collection contenant les subordonnés : employés sous les ordres d'un responsable
     private final HashSet<Employe> LesSubordonnes;
+
     
     // Constructeur d'un Responsable
     public Responsable(String nom, String prenom, int matricule, int indice) throws EmployeException {
@@ -56,7 +58,7 @@ public class Responsable extends Employe {
         }
         return sommesalaire = salaireresp + salairesub;
     }
-
+   
     @Override
     public int hashCode() {
         int hash = 7;
