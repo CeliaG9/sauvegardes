@@ -26,7 +26,7 @@ public abstract class Employe implements Payable {
 
         // Gestion des exceptions
         // nom
-        if (!nom.equals(nom.toUpperCase())) // le nom doit commencer par une majuscule // dans le cas inverse : on gère l'exception
+        if (!nom.equals(nom.toUpperCase())) // le nom doit être écrit intégralement en majuscule // dans le cas inverse : on gère l'exception
         {
             throw new EmployeException("Le nom doit être écrit intégralement en majuscules. Veuillez donc modifier : " + nom);
         }
