@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author mjule
  */
 public class Entreprise {
+    
     // Collection contenant les employés
     private final HashSet<Employe> lesEmployes;
 
