@@ -19,21 +19,22 @@ public class Commercial extends Employe {
         super(nom, prenom, matricule, indice);
         this.vente = vente;
     }
-    
-    /**
-     *
-     * @return
-     */
-    @Override
-    public String toString(){
-        return super.toString() + " (Ventes mensuelles : " + vente + ")";
-    }
 
     // Méthode permettant de calculer le salaire d'un commercial
     @Override
     public double calculSalaire() {
         double salaire = (double) (12*indice + 0.1*vente);
         return salaire;
+    }
+    
+    // Affichage d'un commercial
+        /**
+     *
+     * @return
+     */
+    @Override
+    public String toString(){
+        return super.toString() + " (Ventes mensuelles : " + vente + ")";
     }
 
 
