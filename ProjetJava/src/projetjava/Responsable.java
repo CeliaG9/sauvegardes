@@ -82,6 +82,7 @@ public class Responsable extends Employe {
         return true;
     }
     
+    // Affichage d'un responsable
     @Override
     public String toString(){
         return super.toString();
