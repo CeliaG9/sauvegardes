@@ -11,6 +11,7 @@ package projetjava;
  */
 public class EmpBase extends Employe {
     
+    // Constructeur d'un employé de base
     public EmpBase(String nom, String prenom, int matricule, int indice) throws EmployeException {
         super(nom, prenom, matricule, indice);
     }
@@ -22,5 +23,11 @@ public class EmpBase extends Employe {
         return salaire;
     }
     
+    // Affichage d'un employé de base
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+   
     
 }
