@@ -36,10 +36,13 @@ public class ProjetJava {
 
             // Affichage de l'entreprise
             System.out.println("L'entreprise comprend :" + entreprise.toString());
-
+               
             // entreprise.calculSalaireEntreprise();
+            entreprise.calculSalaireEntreprise();
+            
         } catch (EmployeException ex) {
             ex.getMessage();
         }
+     
     }
 }
