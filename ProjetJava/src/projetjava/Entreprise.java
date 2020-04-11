@@ -70,7 +70,7 @@ public class Entreprise {
     
     @Override
     public String toString() {
-        return lesEmployes.toString();
+        return "{" + lesEmployes + "}";
     }
     
 }
