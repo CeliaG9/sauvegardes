@@ -36,17 +36,15 @@ public class ProjetJava {
             EmpBase EB4 = new EmpBase("LEFEVRE", "Gabrielle", 204, 125);
             EmpBase EB5 = new EmpBase("PETITJEAN", "Céline", 205, 125);
             EmpBase EB6 = new EmpBase("BLANCHARD", "Nathalie", 206, 125);
-            EmpBase EB7 = new EmpBase("RAYMOND", "Jacques", 206, 125);
+            EmpBase EB7 = new EmpBase("RAYMOND", "Jacques", 207, 125);
             
             // Création des commerciaux
             Commercial com1 = new Commercial("BESSON", "Olivier", 301, 150, 14);
             Commercial com2 = new Commercial("GROS", "Paul", 302, 150, 18);
             Commercial com3 = new Commercial("DURAND", "Marianne", 303, 150, 16);
             
-            
-            // Affectation de subordonnés à un responsable
-            // Pour cela, réalisation d'une hiérarchie sur papier
-            // Affectation de subordonnés à Lucas Hubert (resp1)
+            // Réalisation d'une hiérarchie sur papier
+            // Affectation de subordonnés à Lucas Hubert (resp1) : chef de l'entreprise
             resp1.ajoutersubordonnes(resp2);
             resp1.ajoutersubordonnes(resp3);
             resp1.ajoutersubordonnes(EB1);
@@ -85,7 +83,8 @@ public class ProjetJava {
            
    
             // Affichage de l'entreprise
-            System.out.println("L'entreprise comprend :" + entreprise);
+            System.out.println("L'entreprise comprend : \n" + entreprise);
+           
                
             // entreprise.calculSalaireEntreprise();
             entreprise.calculSalaireEntreprise();
