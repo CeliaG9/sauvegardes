@@ -48,8 +48,6 @@ public abstract class Employe implements Payable {
     public int getMatricule() {
         return matricule;
     }
-
-    // TreeSet() : nécessite de redéfinir les méthodes hashCode(), equals() et CompareTo()
     
     @Override
     public int hashCode() {
