@@ -37,7 +37,7 @@ public class ProjetJava {
             // Affectation de subordonnés à un responsable
    
             // Affichage de l'entreprise
-            System.out.println("L'entreprise comprend :" + entreprise.toString());
+            System.out.println("L'entreprise comprend :" + entreprise);
                
             // entreprise.calculSalaireEntreprise();
             entreprise.calculSalaireEntreprise();
