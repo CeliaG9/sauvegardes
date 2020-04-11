@@ -80,7 +80,6 @@ public class ProjetJava {
             entreprise.ajouterEmploye(com1);
             entreprise.ajouterEmploye(com2);
             entreprise.ajouterEmploye(com3);
-           
    
             // Affichage de l'entreprise
             System.out.println("L'entreprise comprend : \n" + entreprise);
