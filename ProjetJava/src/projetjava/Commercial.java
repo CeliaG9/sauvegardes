@@ -34,7 +34,7 @@ public class Commercial extends Employe {
      */
     @Override
     public String toString(){
-        return super.toString() + " (Ventes mensuelles : " + vente + ") \n";
+        return super.toString() + " (Ventes mensuelles : " + vente + ")";
     }
 
 
