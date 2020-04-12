@@ -23,11 +23,5 @@ public class EmpBase extends Employe {
         return salaire;
     }
     
-    // Affichage d'un employé de base
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-   
-    
+    // Affichage d'un employé de base par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel attribut spécifique à l'employé de base à afficher)
 }
