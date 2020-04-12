@@ -42,6 +42,7 @@ public class Entreprise {
         return salairetotal;
     }
 
+    // Affichage de l'entreprise (liste contenant les employés)
     @Override
     public String toString() {
         return "{" + lesEmployes + "}";
