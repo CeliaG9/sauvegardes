@@ -6,6 +6,7 @@
 package projetjava;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 
 /**
@@ -57,36 +58,24 @@ public class Responsable extends Employe {
         }
         return sommesalaire = salaireresp + salairesub;
     }
-   
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.LesSubordonnes);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Responsable other = (Responsable) obj;
-        if (!Objects.equals(this.LesSubordonnes, other.LesSubordonnes)) {
-            return false;
-        }
-        return true;
-    }
     
-    // Affichage d'un responsable
-    @Override
-    public String toString(){
-        return super.toString();
+    // Méthode permettant d'afficher la liste de subordonnés de chaque Responsable
+    // Utilisation d'un itérateur
+    public void affichersubordonnes(){
+    System.out.print(this + " a pour subordonné(s): ");
+    Iterator iterator = LesSubordonnes.iterator();
+    while(iterator.hasNext())
+        System.out.print(iterator.next());
     }
+        
+  
+
+    //for(Employe employe : LesSubordonnes){
+    //System.out.print(employe);
+   
+    
+    // Affichage d'un responsable par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel attribut spécifique au responsable à afficher)
+  
+    
 }
 
