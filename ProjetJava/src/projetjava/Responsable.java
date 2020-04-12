@@ -64,12 +64,17 @@ public class Responsable extends Employe {
     public void affichersubordonnes(){
     System.out.print(this + "a pour subordonné(s): \n");
     Iterator iterator = LesSubordonnes.iterator();
-    while(iterator.hasNext())
-        System.out.print(iterator.next());
+        while(iterator.hasNext())
+        System.out.print(iterator.next()+ "/ ");
+    // retour à la ligne après le dernier subordonné de la liste d'un responsable
+    System.out.println();
     }
-        
-    //for(Employe employe : LesSubordonnes){
-    //System.out.print(employe);
+    
+    // ou d'une boucle for 
+    // for(Employe employe : LesSubordonnes){
+    // System.out.print(employe + "/ ");
+    //}
+    //}
    
     
     // Affichage d'un responsable par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel attribut spécifique au responsable à afficher)
