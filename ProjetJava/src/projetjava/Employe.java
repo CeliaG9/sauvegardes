@@ -12,12 +12,14 @@ import java.util.Objects;
  * @author mjule
  */
 public abstract class Employe implements Payable {
-
+    
+    // Attributs d'un employé
     private final String nom;
     private final String prenom;
     private final int matricule;
     protected int indice;
-
+    
+    // Constructeur d'un employé
     public Employe(String nom, String prenom, int matricule, int indice) throws EmployeException {
         this.nom = nom;
         this.prenom = prenom;
@@ -48,7 +50,10 @@ public abstract class Employe implements Payable {
     public int getMatricule() {
         return matricule;
     }
-    
+
+    // Création de deux hashSet() contenant des employés
+    // Redéfinition des méthodes hashCode() et equals() nécessaire
+    // hashCode()
     @Override
     public int hashCode() {
         int hash = 5;
@@ -58,8 +63,7 @@ public abstract class Employe implements Payable {
         hash = 29 * hash + this.indice;
         return hash;
     }
-
-    // Méthode equals()
+    // equals()
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -86,10 +90,11 @@ public abstract class Employe implements Payable {
         }
         return true;
     }
-
+    
+    // Affichage d'un employé
     @Override
     public String toString() {
-        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName();
+        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName() + "\n";
     }
 
 }
