@@ -10,9 +10,8 @@ package projetjava;
  * @author mjule
  */
 public class Commercial extends Employe {
-    // Attribut spécifique au commercial 
+    // Attribut spécifique à un commercial 
     private final int vente;
-    
     
     // Constructeur d'un commercial
     public Commercial(String nom, String prenom, int matricule, int indice, int vente) throws EmployeException {
@@ -27,7 +26,7 @@ public class Commercial extends Employe {
         return salaire;
     }
     
-    // Affichage d'un commercial
+    // Affichage d'un commercial par héritage de la classe mère (employé) : ici on a besoin d'écrire le toString() car un veut afficher l'attribut spécifique à un commercial : volume des ventes)
         /**
      *
      * @return
