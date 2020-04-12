@@ -59,15 +59,23 @@ public class Responsable extends Employe {
         return sommesalaire = salaireresp + salairesub;
     }
     
-    // Méthode permettant d'afficher la liste de subordonnés de chaque Responsable
+    // Méthode permettant d'afficher la liste des subordonnés de chaque Responsable
     // Utilisation d'un itérateur
     public void affichersubordonnes(){
-    System.out.print(this + "a pour subordonné(s): \n");
-    Iterator iterator = LesSubordonnes.iterator();
-        while(iterator.hasNext())
-        System.out.print(iterator.next()+ "/ ");
+        
+        System.out.print(this + "a pour subordonné(s): \n");
+        Iterator iterator = LesSubordonnes.iterator();
+        
+        while(iterator.hasNext()){
+            System.out.print(iterator.next());
+            if(iterator.hasNext())
+            {
+                System.out.print(" / ");
+            }
+        }
+ 
     // retour à la ligne après le dernier subordonné de la liste d'un responsable
-    System.out.println();
+    System.out.println("\n");
     }
     
     // ou d'une boucle for 
