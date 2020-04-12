@@ -49,6 +49,7 @@ public class ProjetJava {
             resp1.ajoutersubordonnes(resp3);
             resp1.ajoutersubordonnes(EB1);
             resp1.ajoutersubordonnes(EB2);
+            
             // Affectation de subordonnés à Anaïs Laporte (resp2)
             resp2.ajoutersubordonnes(EB3);
             resp2.ajoutersubordonnes(resp4);
@@ -81,10 +82,16 @@ public class ProjetJava {
             entreprise.ajouterEmploye(com2);
             entreprise.ajouterEmploye(com3);
    
-            // Affichage de l'entreprise
+            // Affichage des employés de l'entreprise 
             System.out.println("L'entreprise comprend : \n" + entreprise);
            
-               
+            // Affichage d'un responsable et de sa liste de subordonnés
+            resp1.affichersubordonnes();
+            resp2.affichersubordonnes();
+            resp3.affichersubordonnes();
+            resp4.affichersubordonnes();
+            resp5.affichersubordonnes();;
+            
             // entreprise.calculSalaireEntreprise();
             entreprise.calculSalaireEntreprise();
             
