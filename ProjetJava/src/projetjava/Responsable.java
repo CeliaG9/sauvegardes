@@ -62,7 +62,7 @@ public class Responsable extends Employe {
     // Méthode permettant d'afficher la liste de subordonnés de chaque Responsable
     // Utilisation d'un itérateur
     public void affichersubordonnes(){
-    System.out.print(this + " a pour subordonné(s): ");
+    System.out.print(this + "a pour subordonné(s): ");
     Iterator iterator = LesSubordonnes.iterator();
     while(iterator.hasNext())
         System.out.print(iterator.next());
