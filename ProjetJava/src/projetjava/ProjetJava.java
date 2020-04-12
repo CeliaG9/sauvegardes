@@ -90,10 +90,10 @@ public class ProjetJava {
             resp2.affichersubordonnes();
             resp3.affichersubordonnes();
             resp4.affichersubordonnes();
-            resp5.affichersubordonnes();;
+            resp5.affichersubordonnes();
             
             // entreprise.calculSalaireEntreprise();
-            entreprise.calculSalaireEntreprise();
+            //entreprise.calculSalaireEntreprise();
             
         } catch (EmployeException ex) {
             ex.getMessage();
