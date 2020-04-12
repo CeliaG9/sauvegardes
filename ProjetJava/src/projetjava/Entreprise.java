@@ -18,7 +18,7 @@ public class Entreprise {
     // Collection contenant les employés
     private final HashSet<Employe> lesEmployes;
 
-    // Création du constructeur
+    // Constructeur d'une entreprise
     public Entreprise() {
         lesEmployes = new HashSet<>();
     }
@@ -42,32 +42,6 @@ public class Entreprise {
         return salairetotal;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + Objects.hashCode(this.lesEmployes);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Entreprise other = (Entreprise) obj;
-        if (!Objects.equals(this.lesEmployes, other.lesEmployes)) {
-            return false;
-        }
-        return true;
-    }    
-
-    
     @Override
     public String toString() {
         return "{" + lesEmployes + "}";
