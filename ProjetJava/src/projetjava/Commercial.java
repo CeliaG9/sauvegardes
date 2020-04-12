@@ -10,6 +10,7 @@ package projetjava;
  * @author mjule
  */
 public class Commercial extends Employe {
+    
     // Attribut spécifique à un commercial 
     private final int vente;
     
