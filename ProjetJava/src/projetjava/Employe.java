@@ -94,7 +94,7 @@ public abstract class Employe implements Payable {
     // Affichage d'un employé
     @Override
     public String toString() {
-        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName() + " - ";
+        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName() + " ";
     }
 
 }
