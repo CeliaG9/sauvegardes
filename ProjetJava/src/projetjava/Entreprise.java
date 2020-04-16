@@ -44,10 +44,11 @@ public class Entreprise {
     
     // Affichage de l'entreprise (liste des employés)
     // Avec la boucle forEach // pareil que for(Employe employe : lesEmployes)
+    // Affichage de toutes les informations d’un employé quel que soit son type
     public void afficherEmployes(){
-    System.out.print("L'entreprise contient : \n");
+    System.out.print("Membres de l'entreprise : \n");
     lesEmployes.forEach((employe) -> {  
-        System.out.println(employe + " / Salaire : " + employe.calculSalaire() + " euros"); // Affichage de toutes les informations d’un employé quel que soit son type
+        System.out.println(employe + " / Salaire : " + employe.calculSalaire() + " euros"); 
         });
     // retour à la ligne après le dernier employé de la liste de l'entreprise
     System.out.println();
