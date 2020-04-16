@@ -90,7 +90,7 @@ public abstract class Employe implements Payable {
         }
         return true;
     }
-    
+
     // Affichage d'un employé
     @Override
     public String toString() {
