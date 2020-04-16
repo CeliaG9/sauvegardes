@@ -25,12 +25,12 @@ public class Responsable extends Employe {
     }
     
     // Méthode pour ajouter des subordonnés dans la colletion / TreeSet()
-    public void ajoutersubordonnes(Employe employe){
+    public void ajouterSubordonnes(Employe employe){
         LesSubordonnes.add(employe);
     }
     
     // Méthode pour supprimer des subordonnés de la collection
-    public void supprimersubordonnes(Employe employe){
+    public void supprimerSubordonnes(Employe employe){
         LesSubordonnes.remove(employe);
     }
     
@@ -60,8 +60,8 @@ public class Responsable extends Employe {
     }
     
     // Méthode permettant d'afficher la liste des subordonnés de chaque Responsable
-    // Utilisation d'un itérateur
-    public void affichersubordonnes(){
+    // Utilisation d'un itérateur // on pourrait également utiliser une boucle for 
+    public void afficherSubordonnes(){
         
         System.out.print(this + "a pour subordonné(s): \n");
         Iterator iterator = LesSubordonnes.iterator();
@@ -78,11 +78,10 @@ public class Responsable extends Employe {
     System.out.println("\n");
     }
     
-    // ou d'une boucle for 
-    // for(Employe employe : LesSubordonnes){
-    // System.out.print(employe + "/ ");
-    //}
-    //}
+    // Méthode permettant d'afficher tous les subordonnés (toute la hiérarchie directe inférieure)
+   
+
+
    
     
     // Affichage d'un responsable par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel attribut spécifique au responsable à afficher)
