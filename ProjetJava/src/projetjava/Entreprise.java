@@ -39,34 +39,24 @@ public class Entreprise {
         for (Employe employe : lesEmployes){
             salairetotal = salairetotal + employe.calculSalaire();
         }
-        return salairetotal;
+        return salairetotal;   
     }
-
+    
     // Affichage de l'entreprise (liste des employés)
-    // Avec la boucle for (pour avoir un meilleur affichage)
-    public void afficheremploy(){
+    // Avec la boucle forEach // pareil que for(Employe employe : lesEmployes)
+    public void afficherEmployes(){
     System.out.print("L'entreprise contient : \n");
-        for(Employe employe : lesEmployes){
-            System.out.println(employe);
-        }
+    lesEmployes.forEach((employe) -> {  
+        System.out.println(employe + " / Salaire : " + employe.calculSalaire() + " euros"); // Affichage de toutes les informations d’un employé quel que soit son type
+        });
     // retour à la ligne après le dernier employé de la liste de l'entreprise
     System.out.println();
     }
     
-    // Affichage de l'entreprise (liste contenant les employés)
-    //@Override
-    //public String toString() {
-        //return "{" + lesEmployes + "}";
-    //}
     
-}
+ 
+    }
     
-            
-            
-            
-
-
-
-    
+ 
 
     
