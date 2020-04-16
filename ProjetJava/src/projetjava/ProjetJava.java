@@ -95,8 +95,8 @@ public class ProjetJava {
             
             // Hiérarchie intégrale
           
-            
-            // entreprise.calculSalaireEntreprise();
+            // Affichage de la somme des salaires de l'entreprise
+            System.out.println("Somme des salaires de l'entreprise : " + entreprise.calculSalaireEntreprise() + " euros");
          
             
         } catch (EmployeException ex) {
