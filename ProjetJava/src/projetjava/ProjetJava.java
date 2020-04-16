@@ -23,7 +23,7 @@ public class ProjetJava {
 
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
-            Responsable resp1 = new Responsable("HUBERT", "Lucas", 101, 190);
+            Responsable resp1 = new Responsable("HUBERT", "Lucas", 101, 200);
             Responsable resp2 = new Responsable("LAPORTE", "Anaïs", 102, 175);
             Responsable resp3 = new Responsable("RIBEIRO", "Auguste", 103, 175);
             Responsable resp4 = new Responsable("TURPIN", "Stéphanie", 104, 175);
@@ -45,22 +45,22 @@ public class ProjetJava {
             
             // Réalisation d'une hiérarchie sur papier
             // Affectation de subordonnés à Lucas Hubert (resp1) : chef de l'entreprise
-            resp1.ajoutersubordonnes(resp2);
-            resp1.ajoutersubordonnes(resp3);
-            resp1.ajoutersubordonnes(EB1);
-            resp1.ajoutersubordonnes(EB2);
+            resp1.ajouterSubordonnes(resp2);
+            resp1.ajouterSubordonnes(resp3);
+            resp1.ajouterSubordonnes(EB1);
+            resp1.ajouterSubordonnes(EB2);
             
             // Affectation de subordonnés à Anaïs Laporte (resp2)
-            resp2.ajoutersubordonnes(EB3);
-            resp2.ajoutersubordonnes(resp4);
+            resp2.ajouterSubordonnes(EB3);
+            resp2.ajouterSubordonnes(resp4);
             // Affectation de subordonnés à Auguste Ribeiro (resp3)
-            resp3.ajoutersubordonnes(resp5);
+            resp3.ajouterSubordonnes(resp5);
             // Affectation de subordonnés à Stéphanie Turpin (resp4)
-            resp4.ajoutersubordonnes(EB4);
-            resp4.ajoutersubordonnes(EB5);
-            resp4.ajoutersubordonnes(EB6);
+            resp4.ajouterSubordonnes(EB4);
+            resp4.ajouterSubordonnes(EB5);
+            resp4.ajouterSubordonnes(EB6);
             // Affectation de subordonnés à Bertrand Leveque (resp 5)
-            resp5.ajoutersubordonnes(EB7);
+            resp5.ajouterSubordonnes(EB7);
             
             // Ajout des employés dans l'entreprise
             // Ajout des responsables 
@@ -83,17 +83,21 @@ public class ProjetJava {
             entreprise.ajouterEmploye(com3);
    
             // Affichage des employés de l'entreprise 
-            System.out.println("L'entreprise comprend : \n" + entreprise);
-           
-            // Affichage d'un responsable et de sa liste de subordonnés
-            resp1.affichersubordonnes();
-            resp2.affichersubordonnes();
-            resp3.affichersubordonnes();
-            resp4.affichersubordonnes();
-            resp5.affichersubordonnes();
+            entreprise.afficherEmployes();
+            
+            // Hiérarchie directe
+            // Affichage d'un responsable et de sa liste de subordonnés 
+            resp1.afficherSubordonnes();
+            resp2.afficherSubordonnes();
+            resp3.afficherSubordonnes();
+            resp4.afficherSubordonnes();
+            resp5.afficherSubordonnes();
+            
+            // Hiérarchie intégrale
+          
             
             // entreprise.calculSalaireEntreprise();
-            //entreprise.calculSalaireEntreprise();
+         
             
         } catch (EmployeException ex) {
             ex.getMessage();
