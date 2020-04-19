@@ -79,7 +79,12 @@ public class Responsable extends Employe {
     }
     
     // Méthode permettant d'afficher tous les subordonnés (toute la hiérarchie directe inférieure)
+   public void afficherHierarchie(){
    
+       System.out.println("La hiérarchie de l'entreprise est ");
+       this.afficherSubordonnes();
+       
+   }
 
 
    
