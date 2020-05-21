@@ -20,7 +20,7 @@ public class ProjetJava {
             
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-
+            
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
             Responsable resp1 = new Responsable("HUBERT", "Lucas", 101, 200);
@@ -87,16 +87,34 @@ public class ProjetJava {
             
             // Hiérarchie directe
             // Affichage d'un responsable et de sa liste de subordonnés 
+            System.out.println("***************************************************************");
             resp1.afficherSubordonnes();
             resp2.afficherSubordonnes();
             resp3.afficherSubordonnes();
             resp4.afficherSubordonnes();
             resp5.afficherSubordonnes();
             
-            // Hiérarchie intégrale
-          
+            // 1ère méthode : Hiérarchie intégrale
+            //resp1.afficherHierarchie();
+           
+            // 2ème méthode : Hiérarchie intégrale
+            System.out.println("***************************************************************");
+            resp2.afficherHierarchie(0);
+            
+            // Affichage de la somme des salaires d'une branche de la hiérarchie
+            System.out.println("***************************************************************");
+            resp1.calculSalaireHierarchie();
+            //System.out.println("Somme des salaires de la branche hierarchique de " + resp1.toString() + " : " + resp1.getSommeSalaire());
+           
+            // Affichage de la somme des salaires des subordonnés d'un responsable
+            System.out.println("***************************************************************");
+            System.out.println("Somme des salaires des subordonnés de " + resp3.getMatricule() + " (" + resp3.toString() + ") : " + resp3.calculSalaireSubordonnes() + " euros");
+            
+           
             // Affichage de la somme des salaires de l'entreprise
+            System.out.println("***************************************************************");
             System.out.println("Somme des salaires de l'entreprise : " + entreprise.calculSalaireEntreprise() + " euros");
+            
          
             
         } catch (EmployeException ex) {
