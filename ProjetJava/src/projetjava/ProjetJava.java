@@ -5,6 +5,10 @@
  */
 package projetjava;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author celia
@@ -17,10 +21,11 @@ public class ProjetJava {
      */
     public static void main(String[] args) throws EmployeException {
         try {
-            
+
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-            
+//            String filePath = new String();
+
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
             Responsable resp1 = new Responsable("HUBERT", "Lucas", 101, 200);
@@ -37,19 +42,19 @@ public class ProjetJava {
             EmpBase EB5 = new EmpBase("PETITJEAN", "Céline", 205, 125);
             EmpBase EB6 = new EmpBase("BLANCHARD", "Nathalie", 206, 125);
             EmpBase EB7 = new EmpBase("RAYMOND", "Jacques", 207, 125);
-            
+
             // Création des commerciaux
             Commercial com1 = new Commercial("BESSON", "Olivier", 301, 150, 14);
             Commercial com2 = new Commercial("GROS", "Paul", 302, 150, 18);
             Commercial com3 = new Commercial("DURAND", "Marianne", 303, 150, 16);
-            
+
             // Réalisation d'une hiérarchie sur papier
             // Affectation de subordonnés à Lucas Hubert (resp1) : chef de l'entreprise
             resp1.ajouterSubordonnes(resp2);
             resp1.ajouterSubordonnes(resp3);
             resp1.ajouterSubordonnes(EB1);
             resp1.ajouterSubordonnes(EB2);
-            
+
             // Affectation de subordonnés à Anaïs Laporte (resp2)
             resp2.ajouterSubordonnes(EB3);
             resp2.ajouterSubordonnes(resp4);
@@ -61,7 +66,7 @@ public class ProjetJava {
             resp4.ajouterSubordonnes(EB6);
             // Affectation de subordonnés à Bertrand Leveque (resp 5)
             resp5.ajouterSubordonnes(EB7);
-            
+
             // Ajout des employés dans l'entreprise
             // Ajout des responsables 
             entreprise.ajouterEmploye(resp1);
@@ -81,10 +86,10 @@ public class ProjetJava {
             entreprise.ajouterEmploye(com1);
             entreprise.ajouterEmploye(com2);
             entreprise.ajouterEmploye(com3);
-   
+
             // Affichage des employés de l'entreprise 
             entreprise.afficherEmployes();
-            
+
             // Hiérarchie directe
             // Affichage d'un responsable et de sa liste de subordonnés 
             System.out.println("***************************************************************");
@@ -93,33 +98,44 @@ public class ProjetJava {
             resp3.afficherSubordonnes();
             resp4.afficherSubordonnes();
             resp5.afficherSubordonnes();
-            
+
             // 1ère méthode : Hiérarchie intégrale
-            //resp1.afficherHierarchie();
-           
+            //resp0.afficherHierarchie(0);
             // 2ème méthode : Hiérarchie intégrale
             System.out.println("***************************************************************");
-            resp2.afficherHierarchie(0);
-            
+            resp1.afficherHierarchie(0);
+
             // Affichage de la somme des salaires d'une branche de la hiérarchie
             System.out.println("***************************************************************");
             resp1.calculSalaireHierarchie();
             //System.out.println("Somme des salaires de la branche hierarchique de " + resp1.toString() + " : " + resp1.getSommeSalaire());
-           
+
             // Affichage de la somme des salaires des subordonnés d'un responsable
             System.out.println("***************************************************************");
             System.out.println("Somme des salaires des subordonnés de " + resp3.getMatricule() + " (" + resp3.toString() + ") : " + resp3.calculSalaireSubordonnes() + " euros");
-            
-           
+
             // Affichage de la somme des salaires de l'entreprise
             System.out.println("***************************************************************");
             System.out.println("Somme des salaires de l'entreprise : " + entreprise.calculSalaireEntreprise() + " euros");
-            
-         
-            
+
         } catch (EmployeException ex) {
             ex.getMessage();
         }
-     
+
+//        try {
+//            entreprise.sauver(filePath);
+//            System.out.println("Entreprise sauvegardée dans le fichier " + filePath);
+//        } catch (IOException ex) {
+//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        try {
+//            Entreprise lue = Entreprise.lire(filePath);
+//            System.out.println("Entreprise lue = " + lue);
+//        } catch (IOException ex) {
+//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (ClassNotFoundException ex) {
+//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
     }
 }
