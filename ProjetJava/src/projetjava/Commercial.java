@@ -37,5 +37,12 @@ public class Commercial extends Employe {
         return super.toString() + " (Ventes mensuelles : " + vente + ")";
     }
 
+    // Redéfinition de la méthode afficherHierarchie()
+    /*@Override
+    public void afficherHierarchie() {
+        System.out.println(this + "n'a pas de hiérarchie");
+    }
+    */
+
 
 }
