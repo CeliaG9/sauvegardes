@@ -50,6 +50,16 @@ public abstract class Employe implements Payable {
     public int getMatricule() {
         return matricule;
     }
+    
+    // Méthode calculSalaire() héritée par les classes EmpBase et Responsable
+    @Override
+    public double calculSalaire() {
+        double salaire = 12 * indice;
+        return salaire;
+    }
+    
+    // Méthode abstraite : afficherHierarchie()
+    //public abstract void afficherHierarchie();
 
     // Création de deux hashSet() contenant des employés
     // Redéfinition des méthodes hashCode() et equals() nécessaire
@@ -94,7 +104,7 @@ public abstract class Employe implements Payable {
     // Affichage d'un employé
     @Override
     public String toString() {
-        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName() + " ";
+        return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName();
     }
 
 }
