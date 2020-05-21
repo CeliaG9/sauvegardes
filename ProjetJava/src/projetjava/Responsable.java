@@ -37,13 +37,12 @@ public class Responsable extends Employe {
     // Méthode pour calculer la somme des salaires des subordonnées des responsables
     public double calculSalaireSubordonnes() {
         double sommesalaire = 0;
-        
+
         for (Employe employe : LesSubordonnes) {
             sommesalaire = sommesalaire + employe.calculSalaire();
         }
         return sommesalaire;
     }
-    
 
     // Méthode permettant d'afficher la liste des subordonnés de chaque Responsable
     // Utilisation d'un itérateur // on pourrait également utiliser une boucle for 
@@ -77,11 +76,9 @@ public class Responsable extends Employe {
             }
         }
     }
-    */
-    
-     // 2ème méthode permettant d'afficher tous les subordonnés (toute la hiérarchie directe inférieure)
+     */
+    // 2ème méthode permettant d'afficher tous les subordonnés (toute la hiérarchie directe inférieure)
     public void afficherHierarchie(int profondeur) {
-
         for (Employe employe : LesSubordonnes) {
             if (employe instanceof Responsable) {
                 for (int i = 0; i < profondeur; i++) {
@@ -96,28 +93,23 @@ public class Responsable extends Employe {
                     System.out.print("\t");
                 }
                 System.out.println(employe.toString());
-            } 
+            }
         }
     }
- 
+
     // Méthode pour calculer les salaires d'une branche de la hiérarchie
     public void calculSalaireHierarchie() {
-        
         sommeSalaire += this.calculSalaire();
-
         for (Employe employe : LesSubordonnes) {
             if (employe instanceof Responsable) {
                 ((Responsable) employe).calculSalaireHierarchie();
             } else {
                 sommeSalaire += employe.calculSalaire();
-            } 
+            }
         }
-        
+
         System.out.println("Somme des salaires : " + sommeSalaire);
     }
-    
-
 
     // Affichage d'un responsable par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel var spécifique au responsable à afficher)
-    
 }
