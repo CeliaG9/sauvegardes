@@ -5,6 +5,7 @@
  */
 package projetjava;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,13 +19,16 @@ public class ProjetJava {
     /**
      * @param args the command line arguments
      * @throws projetjava.EmployeException
+     * @throws java.io.IOException
+     * @throws java.io.FileNotFoundException
+     * @throws java.lang.ClassNotFoundException
      */
-    public static void main(String[] args) throws EmployeException {
+    public static void main(String[] args) throws EmployeException, IOException, FileNotFoundException, ClassNotFoundException {
         try {
 
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-//            String filePath = new String();
+            String filePath = "essaieEntreprise.dat";
 
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
@@ -117,25 +121,17 @@ public class ProjetJava {
             // Affichage de la somme des salaires de l'entreprise
             System.out.println("***************************************************************");
             System.out.println("Somme des salaires de l'entreprise : " + entreprise.calculSalaireEntreprise() + " euros");
+            
+            // Gestion de la partie sauvegarde
+            entreprise.sauver(filePath);
+            System.out.println("Entreprise sauvegardée dans le fichier " + filePath);
+            Entreprise lue = Entreprise.lire(filePath);
+            System.out.println("Entreprise lue = " + lue);
 
         } catch (EmployeException ex) {
             ex.getMessage();
+            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//        try {
-//            entreprise.sauver(filePath);
-//            System.out.println("Entreprise sauvegardée dans le fichier " + filePath);
-//        } catch (IOException ex) {
-//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        try {
-//            Entreprise lue = Entreprise.lire(filePath);
-//            System.out.println("Entreprise lue = " + lue);
-//        } catch (IOException ex) {
-//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(ProjetJava.class.getName()).log(Level.SEVERE, null, ex);
-//        }
 
     }
 }
