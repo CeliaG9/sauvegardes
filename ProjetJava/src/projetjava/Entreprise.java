@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 
 /**
@@ -62,10 +63,12 @@ public class Entreprise implements Serializable {
     public void sauver(String filePath) throws FileNotFoundException, IOException {
         FileOutputStream fos = new FileOutputStream(filePath);
         ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(this);
+        oos.writeInt(12345);
+        oos.writeObject("Today");
+        oos.writeObject(new Date());
         oos.close();
     }
-
+    
     public static Entreprise lire(String filePath) throws FileNotFoundException, IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(filePath);
         ObjectInputStream ois = new ObjectInputStream(fis);
