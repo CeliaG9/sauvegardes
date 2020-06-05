@@ -28,7 +28,7 @@ public class ProjetJava {
 
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-            String filePath = "C:\\Users\\mjule\\Documents\\sauvegardes\\SauvegardesEntreprise\\essaiEntreprise.dat";
+            String filePath = "C:\\Users\\mjule\\Documents\\sauvegardes\\SauvegardesEntreprise\\essaiEntreprise.txt";
 
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
