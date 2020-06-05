@@ -5,11 +5,13 @@
  */
 package projetjava;
 
+import java.io.Serializable;
+
 /**
  *
  * @author mjule
  */
-public class Commercial extends Employe {
+public class Commercial extends Employe implements Serializable{
     
     // Attribut spécifique à un commercial 
     private final int vente;
@@ -46,3 +48,4 @@ public class Commercial extends Employe {
 
 
 }
+

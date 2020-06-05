@@ -5,13 +5,14 @@
  */
 package projetjava;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author mjule
  */
-public abstract class Employe implements Payable {
+public abstract class Employe implements Payable, Serializable {
     
     // Attributs d'un employé
     private final String nom;
@@ -107,4 +108,38 @@ public abstract class Employe implements Payable {
         return this.prenom + " " + this.nom + " : " + this.getClass().getSimpleName();
     }
 
+   
+
+    
+    
+  
+    
+    // PARTIE SAUVEGARDE
+    /**
+     * Méthode de classe permettant de lire et retourner un objet Personne dans
+     * la String passée en paramètre.
+     *
+     * @param content La String à parcourir
+     * @return L'objet Personne lu dans la String content.
+     */
+    /*public static Employe lireEmploye(String content) throws EmployeException {
+        Scanner sc = new Scanner(content);
+        String ligne = sc.next();
+        StringTokenizer token = new StringTokenizer(ligne, "|");
+        String nom = token.nextToken();
+        String prenom = token.nextToken();
+        String smatricule = token.nextToken();
+        int matricule = Integer.parseInt(smatricule);
+        String sindice = token.nextToken();
+        int indice = Integer.parseInt(sindice);
+        Employe newEmploye = new Employe (nom, prenom, matricule, indice) {};
+        return newEmploye;
+    }
+
+    public String getTexteASauver() {
+        return nom + "|" + prenom + "|" + matricule;
+    }*/
+    
 }
+
+

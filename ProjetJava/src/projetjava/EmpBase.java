@@ -5,11 +5,13 @@
  */
 package projetjava;
 
+import java.io.Serializable;
+
 /**
  *
  * @author mjule
  */
-public class EmpBase extends Employe {
+public class EmpBase extends Employe implements Serializable{
     
     // Constructeur d'un employé de base
     public EmpBase(String nom, String prenom, int matricule, int indice) throws EmployeException {
@@ -23,5 +25,5 @@ public class EmpBase extends Employe {
     public void afficherHierarchie() {
         System.out.println(this + "n'a pas de hiérarchie");
     */
-    
 }
+

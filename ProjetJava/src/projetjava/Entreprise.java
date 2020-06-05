@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Date;
 import java.util.HashSet;
 
 /**
@@ -59,13 +58,16 @@ public class Entreprise implements Serializable {
         // retour à la ligne après le dernier employé de la liste de l'entreprise
         System.out.println();
     }
-
-    public void sauver(String filePath) throws FileNotFoundException, IOException {
+    
+    
+    
+    
+    
+    // PARTIE SAUVEGARDE
+    public void sauver(String filePath) throws FileNotFoundException, IOException { // filepath = remplacer par le chemin d'accès au fichier
         FileOutputStream fos = new FileOutputStream(filePath);
         ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeInt(12345);
-        oos.writeObject("Today");
-        oos.writeObject(new Date());
+        oos.writeObject(this);
         oos.close();
     }
     
@@ -76,5 +78,47 @@ public class Entreprise implements Serializable {
         ois.close();
         return obj;
     }
+    
+    /*public void sauverTexte(String filePath) throws IOException, EmployeException {
+        /* Un flux textuel en écriture vers le fichier passé en paramètre
+         * Le booléen en second paramètre indique que les données sont ajoutées
+         * à la fin du fichier
+        
+    /*
+        FileWriter fw = new FileWriter(filePath, true);
+        // Pour chaque attribut de mon instance je l'écris dans le fichier
+      
+        // On insère un retour à la ligne
+        fw.write(System.lineSeparator());
+        for (Employe employe : lesEmployes) {
+            fw.write(employe.getTexteASauver() + "#");
+        }
+        // On insère un retour à la ligne
+        fw.write(System.lineSeparator());
+        fw.close();
+    }
+*/
+
+    /**
+     * Méthode de classe permettant de lire et retourner un objet Voiture dans
+     * le fichier texte dont le chemin est passé en paramètre.
+     *
+     * @param filePath Le chemin du fichier lu
+     * @return L'objet Voiture lu dans le fichier.
+     * @throws java.io.IOException
+     */
+    /*public static Entreprise lireSauvEntreprise(String filePath) throws IOException, EmployeException {
+        Scanner sc = new Scanner(Paths.get(filePath));
+        String ligne = sc.next();
+        StringTokenizer token = new StringTokenizer(ligne, "#");
+        HashSet<Employe> lesEmployes = new HashSet<>();
+        while (token.hasMoreElements()) {
+            lesEmployes.add(Employe.lireEmploye(token.nextToken()));
+        }
+        return new Entreprise();
+    }
+    */
 
 }
+
+    

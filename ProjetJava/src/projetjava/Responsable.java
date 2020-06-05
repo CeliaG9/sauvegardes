@@ -5,6 +5,7 @@
  */
 package projetjava;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -12,7 +13,7 @@ import java.util.Iterator;
  *
  * @author mjule
  */
-public class Responsable extends Employe {
+public class Responsable extends Employe implements Serializable{
 
     // Collection contenant les subordonnés : employés sous les ordres d'un responsable
     private final HashSet<Employe> LesSubordonnes;
@@ -107,9 +108,16 @@ public class Responsable extends Employe {
                 sommeSalaire += employe.calculSalaire();
             }
         }
-
-        System.out.println("Somme des salaires : " + sommeSalaire);
+    }
+    
+    public static double getSommeSalaire() {
+        return sommeSalaire;
     }
 
     // Affichage d'un responsable par héritage de la classe mère (employé) : pas besoin d'écrire le toString() (pas de nouvel var spécifique au responsable à afficher)
+
+   
 }
+
+    
+
