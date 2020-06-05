@@ -49,7 +49,7 @@ public class Responsable extends Employe implements Serializable{
     // Utilisation d'un itérateur // on pourrait également utiliser une boucle for 
     public void afficherSubordonnes() {
 
-        System.out.print(this + "a pour subordonné(s): \n");
+        System.out.print(this + " a pour subordonné(s): \n");
         Iterator<Employe> iterator = LesSubordonnes.iterator(); // L'itérateur est typé // l'itérateur permet de manipuler un objet précis : un employé
 
         while (iterator.hasNext()) {
