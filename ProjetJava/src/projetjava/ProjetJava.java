@@ -28,7 +28,7 @@ public class ProjetJava {
 
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-            String filePath = "essaieEntreprise.dat";
+            String filePath = "C:\\Users\\mjule\\Documents\\sauvegardes\\SauvegardesEntreprise\\essaiEntreprise.dat";
 
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
@@ -127,7 +127,7 @@ public class ProjetJava {
             entreprise.sauver(filePath);
             System.out.println("Entreprise sauvegardée dans le fichier " + filePath);
             Entreprise lue = Entreprise.lire(filePath);
-            System.out.println("Entreprise lue = " + lue);
+            System.out.println("Entreprise lue = " + lue.toString());
 
         } catch (EmployeException ex) {
             ex.getMessage();
