@@ -28,7 +28,7 @@ public class ProjetJava {
 
             // Création de l'entreprise
             Entreprise entreprise = new Entreprise();
-            String filePath = "C:\\Users\\mjule\\Documents\\sauvegardes\\SauvegardesEntreprise\\essaiEntreprise.txt";
+
 
             // Création des employés : une quinzaine d'employés au départ
             // Création des responsables
@@ -112,7 +112,7 @@ public class ProjetJava {
             // Affichage de la somme des salaires d'une branche de la hiérarchie
             System.out.println("****************************************************************************************************");
             resp2.calculSalaireHierarchie();
-            System.out.println("Somme des salaires de la branche hierarchique de " + resp2.getMatricule() + " (" + resp2.toString() + ") : " + resp2.getSommeSalaire() + " euros");
+            System.out.println("Somme des salaires de la branche hiérarchique de " + resp2.getMatricule() + " (" + resp2.toString() + ") : " + resp2.getSommeSalaire() + " euros");
 
             // Affichage de la somme des salaires des subordonnés d'un responsable
             System.out.println("****************************************************************************************************");
@@ -121,13 +121,31 @@ public class ProjetJava {
             // Affichage de la somme des salaires de l'entreprise
             System.out.println("****************************************************************************************************");
             System.out.println("Somme des salaires de l'entreprise : " + entreprise.calculSalaireEntreprise() + " euros");
-
+            
             
             // Gestion de la partie sauvegarde
-            entreprise.sauver(filePath);
-            System.out.println("Entreprise sauvegardée dans le fichier " + filePath);
-            Entreprise lue = Entreprise.lire(filePath);
-            System.out.println("Entreprise lue = " + lue.toString());
+            // Sauver l'entreprise
+            entreprise.sauver("entreprise2021.dat");
+            System.out.println("Entreprise sauvegardée dans le fichier " + "entreprise2021.dat");
+            System.out.println("");
+            
+
+            // Lire l'entreprise
+            // Entreprise entreprise2019 = Entreprise.lire("entreprise2019.dat");
+            // System.out.println("Entreprise lue : ");
+            // entreprise2019.afficherEmployes();
+            
+            // Entreprise entreprise2020 = Entreprise.lire("entreprise2020.dat");
+            // System.out.println("Entreprise lue : ");
+            // entreprise2020.afficherEmployes();
+            
+            Entreprise entreprise2021 = Entreprise.lire("entreprise2021.dat");
+            System.out.println("Entreprise lue : ");
+            entreprise2021.afficherEmployes();
+            
+
+         
+
 
         } catch (EmployeException ex) {
             ex.getMessage();
@@ -137,5 +155,3 @@ public class ProjetJava {
 
     }
 }
-
-    
